@@ -1,0 +1,57 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row" *ngIf="datos">
+            <div class="col-md-12" *ngFor="let inscripcion of inscriptionData">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title">Resultado de la Búsqueda</h4>
+                        <p class="card-category">Publicaciones</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="font-weight-bold">Tipo Publicaciòn:</label>
+                                <p class="card-category">{{inscripcion.periodo}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="font-weight-bold">Nombres:</label>
+                                <p class="card-category">{{inscripcion.nombres}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="font-weight-bold">Area:</label>
+                                <p class="card-category">{{inscripcion.apellidos}}</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-lg-5 col-md-6 col-sm-6 pull-right">
+                                <div class="card card-stats">
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">date_range</i> Recuede cancelar el valor para
+                                            continuar con su matricula
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button mat-raised-button type="submit" class="btn btn-success btn-round pull-right" (click)="enviar(inscripcion.cedula)"><i class="material-icons">payment</i>
+                            Continuar</button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!datos">
+            <div class="card">
+                <div class="card-header card-header-danger">
+                    <h3 class="card-title">Publicaciones</h3>
+                    <p class="card-category">No se ha encontrado registro de publicaciones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

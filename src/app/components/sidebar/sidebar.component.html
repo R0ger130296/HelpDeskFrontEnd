@@ -1,0 +1,41 @@
+<div class="logo">
+    <img class="mx-auto d-block" src="/assets/img/Espe-Angular-Logo.png" />
+</div>
+<div class="sidebar-wrapper">
+    <p-fieldset legend="Busqueda" [toggleable]="true">
+        <ul class="nav">
+            <li>
+                <span class="bmd-form-group">
+                    <label class="font-weight-bold">Nombres:
+                    </label>
+                    <div class="input-group no-border">
+                        <input type="text" style="text-transform:uppercase;" class="form-control"
+                            placeholder="Ingrese sus nombres">
+                    </div>
+                </span>
+                <span class="bmd-form-group">
+                    <label class="font-weight-bold">Apellidos:
+                    </label>
+                    <div class="input-group no-border">
+                        <input type="text" style="text-transform:uppercase;" class="form-control"
+                            placeholder="Ingrese sus apellidos">
+                    </div>
+                </span>
+                <span class="bmd-form-group">
+                    <label class="font-weight-bold">Cedula:
+                    </label>
+                    <div class="input-group no-border">
+                        <input type="number" class="form-control" placeholder="Ingrese su cedula">
+                    </div>
+                </span>
+            </li>
+            <li>
+                <button mat-raised-button class="form-control">
+                    <a href="/publicaciones/create" title="Buscar">Buscar</a>
+                </button>
+            </li>
+        </ul>
+
+    </p-fieldset>
+    <p-toast [style]="{'marginTop': '80px'}" [style.z-index]="9999"></p-toast>
+</div>
